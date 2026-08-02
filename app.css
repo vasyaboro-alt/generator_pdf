@@ -286,6 +286,13 @@ button {
   width: 72px;
   height: 72px;
   min-height: 72px;
+  /* Белый фон превью — как на страницах гайда */
+  background: #ffffff;
+}
+
+#card-logoHeader .upload-preview--logo {
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .uploads--logos .upload-meta {
