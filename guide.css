@@ -126,10 +126,12 @@
   width: auto;
   max-width: 60mm;
   object-fit: contain;
-  /* Без тёмной плашки: на белой странице логотип с тёмным текстом читается сам */
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
+  background: none !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 .guide-body {
