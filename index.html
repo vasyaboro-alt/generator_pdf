@@ -67,10 +67,8 @@
                   <span>JPG / PNG — основная картинка на всю страницу</span>
                 </div>
                 <div class="upload-actions">
-                  <label class="btn btn-primary btn-file">
-                    Загрузить фон
-                    <input type="file" id="input-coverImage" accept="image/png,image/jpeg,image/webp" />
-                  </label>
+                  <button type="button" class="btn btn-primary btn-upload" id="pick-coverImage">Загрузить фон</button>
+                  <input type="file" id="input-coverImage" class="sr-only" accept="image/png,image/jpeg,image/webp" tabindex="-1" />
                   <button type="button" class="btn btn-ghost" id="clear-coverImage" hidden>Убрать</button>
                 </div>
               </div>
@@ -83,10 +81,8 @@
                     <span>PNG без фона — правый верхний угол обложки</span>
                   </div>
                   <div class="upload-actions">
-                    <label class="btn btn-primary btn-file">
-                      Логотип для обложки
-                      <input type="file" id="input-logoCover" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
-                    </label>
+                    <button type="button" class="btn btn-primary btn-upload" id="pick-logoCover">Загрузить логотип для обложки</button>
+                    <input type="file" id="input-logoCover" class="sr-only" accept="image/png,image/jpeg,image/webp,image/svg+xml" tabindex="-1" />
                     <button type="button" class="btn btn-ghost" id="clear-logoCover" hidden>Убрать</button>
                   </div>
                 </div>
@@ -98,10 +94,8 @@
                     <span>В шапке каждой страницы содержания</span>
                   </div>
                   <div class="upload-actions">
-                    <label class="btn btn-primary btn-file">
-                      Логотип для страниц
-                      <input type="file" id="input-logoHeader" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
-                    </label>
+                    <button type="button" class="btn btn-primary btn-upload" id="pick-logoHeader">Загрузить логотип для страниц</button>
+                    <input type="file" id="input-logoHeader" class="sr-only" accept="image/png,image/jpeg,image/webp,image/svg+xml" tabindex="-1" />
                     <button type="button" class="btn btn-ghost" id="clear-logoHeader" hidden>Убрать</button>
                   </div>
                 </div>
