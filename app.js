@@ -285,7 +285,11 @@ function clearImage(key) {
 function bindUploads() {
   ["coverImage", "logoCover", "logoHeader"].forEach((key) => {
     const input = $(`#input-${key}`);
+    const pickBtn = $(`#pick-${key}`);
     const clearBtn = $(`#clear-${key}`);
+    if (pickBtn && input) {
+      pickBtn.addEventListener("click", () => input.click());
+    }
     if (input) {
       input.addEventListener("change", async () => {
         const file = input.files?.[0];
