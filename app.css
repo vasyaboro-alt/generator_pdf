@@ -179,7 +179,7 @@ button {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .block > summary {
@@ -268,17 +268,42 @@ button {
 
 .uploads--logos {
   grid-template-columns: 1fr;
+  gap: 0.65rem;
 }
 
 .uploads--logos .upload-card {
   border-style: solid;
   border-color: rgba(255, 222, 4, 0.4);
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.45rem 0.75rem;
+  align-items: center;
+}
+
+.uploads--logos .upload-preview--logo {
+  grid-row: 1 / 3;
+  width: 72px;
+  height: 72px;
+  min-height: 72px;
+}
+
+.uploads--logos .upload-meta {
+  grid-column: 2;
+}
+
+.uploads--logos .upload-actions {
+  grid-column: 2;
 }
 
 .uploads--logos .btn-upload {
   width: 100%;
-  min-height: 48px;
-  font-size: 0.95rem;
+  min-height: 44px;
+  font-size: 0.88rem;
+}
+
+.upload-card--hero .upload-preview--cover {
+  height: 110px;
 }
 
 .upload-card {
@@ -370,18 +395,21 @@ button {
   flex: 1 1 auto;
 }
 
-/* Скрытый file input: не opacity-оверлей на кнопке (иначе кнопка «пропадает») */
+/* Скрытый file input: уводим за экран, без pointer-events —
+   иначе нативный контрол перекрывает кнопки ниже */
 .sr-only {
-  position: absolute !important;
+  position: fixed !important;
+  left: -10000px !important;
+  top: 0 !important;
   width: 1px !important;
   height: 1px !important;
   padding: 0 !important;
-  margin: -1px !important;
+  margin: 0 !important;
   overflow: hidden !important;
   clip: rect(0, 0, 0, 0) !important;
-  clip-path: inset(50%) !important;
-  white-space: nowrap !important;
   border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .btn-file {
