@@ -275,9 +275,10 @@ button {
   border-color: rgba(255, 222, 4, 0.4);
 }
 
-.uploads--logos .btn-file {
+.uploads--logos .btn-upload {
   width: 100%;
-  min-height: 44px;
+  min-height: 48px;
+  font-size: 0.95rem;
 }
 
 .upload-card {
@@ -362,6 +363,25 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
+  align-items: center;
+}
+
+.btn-upload {
+  flex: 1 1 auto;
+}
+
+/* Скрытый file input: не opacity-оверлей на кнопке (иначе кнопка «пропадает») */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .btn-file {
@@ -373,7 +393,7 @@ button {
   overflow: hidden;
 }
 
-/* Не использовать display:none / hidden — иначе клик по label не открывает диалог */
+/* Для динамических кнопок блоков (изображения в контенте) */
 .btn-file input[type="file"] {
   position: absolute;
   inset: 0;
