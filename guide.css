@@ -114,7 +114,7 @@
 }
 
 .guide-header {
-  flex: 0 0 10mm;
+  flex: 0 0 12mm;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -122,10 +122,15 @@
 }
 
 .guide-header img {
-  height: 9mm;
+  height: 10mm;
   width: auto;
-  max-width: 55mm;
+  max-width: 60mm;
   object-fit: contain;
+  /* Тёмная подложка: жёлтый/светлый логотип читается на белой странице */
+  background: #1a1a2e;
+  padding: 2.5mm 3.5mm;
+  border-radius: 2mm;
+  box-sizing: content-box;
 }
 
 .guide-body {
